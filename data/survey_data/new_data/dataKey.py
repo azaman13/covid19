@@ -16,13 +16,8 @@ def retrieve_all_questions():
     question_key = {}
     input_file_name = "data_dict.csv"
     df = pd.read_csv(input_file_name)
-    for column in df.columns:
-        question_row = df.loc[df['Variable / Field Name'] == column].iloc[0]
+    for column in df['Variable / Field Name']:
+        question_row = df.loc[df['Variable / Field Name'] == str(column)].iloc[0]
         question = question_row['Field Label']
         question_key[column] = question
     return question_key
-        
-    
-
-
-
