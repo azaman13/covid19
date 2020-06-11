@@ -55,7 +55,6 @@ def compute_scores(df):
     df_w_scores = compute_selfesteem(df2)
     return df_w_scores
 
-
 def drop_excess(df):
     print(df.columns[0])
     excess_columns = ['redcap_survey_identifier','redcap_event_name','ph_id2_2bf']
