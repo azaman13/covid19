@@ -12,3 +12,16 @@ def retrive_question_data(column_name):
         answers[split_answer[0]] = split_answer[1]
     return question,answers
 
+def print_all_questions():
+    question_key = {}
+    df = pd.read_csv(input_file_name)
+    for column in df.columns:
+        question_row = df.loc[df['Variable / Field Name'] == column].iloc[0]
+        question = question_row['Field Label']
+        question_key[column] = question
+    return question_key
+        
+    
+
+
+
