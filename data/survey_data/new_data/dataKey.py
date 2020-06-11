@@ -1,6 +1,6 @@
 import pandas as pd
 
-def retrive_question_data(column_name):
+def retrieve_question_data(column_name):
     answers = {}
     input_file_name = "data_dict.csv"
     df = pd.read_csv(input_file_name)
@@ -12,7 +12,7 @@ def retrive_question_data(column_name):
         answers[split_answer[0]] = split_answer[1]
     return question,answers
 
-def print_all_questions():
+def retrieve_all_questions():
     question_key = {}
     df = pd.read_csv(input_file_name)
     for column in df.columns:
