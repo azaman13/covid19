@@ -14,6 +14,7 @@ def retrieve_question_data(column_name):
 
 def retrieve_all_questions():
     question_key = {}
+    input_file_name = "data_dict.csv"
     df = pd.read_csv(input_file_name)
     for column in df.columns:
         question_row = df.loc[df['Variable / Field Name'] == column].iloc[0]
