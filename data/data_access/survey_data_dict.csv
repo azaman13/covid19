@@ -1,0 +1,117 @@
+"Variable / Field Name","Form Name","Section Header","Field Type","Field Label","Choices, Calculations, OR Slider Labels","Field Note","Text Validation Type OR Show Slider Number","Text Validation Min","Text Validation Max",Identifier?,"Branching Logic (Show field only if...)","Required Field?","Custom Alignment","Question Number (surveys only)","Matrix Group Name","Matrix Ranking?","Field Annotation"
+record_id,promotehealth,,text,"Record ID",,,,,,,,,,,,,
+ph_id2_2bf,promotehealth,"System Generated ID. Do Not edit this!",calc,"PromoteHealth ID Number:",[record_id],,,,,,,,,,,,
+living_situation_before,promotehealth,"Please answer these questions thinking about your life BEFORE the COVID-19 pandemic/lockdown.
+
+
+",radio,"Before the pandemic, what was your living situation (spring 2020)?","1, With parents or guardians | 2, With other family/relatives | 3, University dorm (single) | 4, University dorm (shared room) | 5, Fraternity or sorority (single) | 6, Fraternity or sorority (shared room) | 7, University or off-campus house or apartment (single) | 8, University or off-campus house or apartment (with housemates) | 9, Other",,,,,,,y,LV,,,,
+academic_work_hr_before,promotehealth,,radio,"Before the pandemic, how many hours per week, on average, did you spend on academic work during the semester?","1, Less than 10 hours ( < 1.4hr/day) | 2, Between 10 - 20 hours (< 2.9hr/day) | 3, Between 20 - 30 hours (< 4.2hr/day) | 4, Between 30 - 40 hours (< 5.7hr/day) | 5, More than 40 hours ( > 5.7 hr/day)",,,,,,,y,LV,,,,
+substances_before,promotehealth,,radio,"Before the lockdown, how frequently did you partake in any other recreational substances? (alcohol, marijuana, cocaine, heroin, ecstasy, amphetamines, etc.)? ","1, Very Frequently | 2, Frequently | 3, Occasionally | 4, Rarely | 5, Very Rarely | 6, Never",,,,,,,y,LV,,,,
+smokling_before,promotehealth,,radio,"Before the lockdown, how frequently did you used to smoke cigarettes, cigars, pipes, or e-cigarettes? ","1, Very Frequently | 2, Frequently | 3, Occasionally | 4, Rarely | 5, Very Rarely | 6, Never",,,,,,,y,LV,,,,
+healthy_before,promotehealth,,radio,"Before the pandemic, I tried to be healthy. For example, eating healthy, regularly going to the gym, taking/considering fitness classes, participating in recreational sports, etc.","1, Very often | 2, Fairly often | 3, Sometimes | 4, Almost never | 5, Neve",,,,,,,y,LV,,,,
+improve_spirit_before,promotehealth,,radio,"Before the pandemic, to improve my spirit, I engaged in activities such as hobbies, meditation, self-reflection, activities that make me happy, etc.","1, Very often | 2, Fairly often | 3, Sometimes | 4, Almost never | 5, Never",,,,,,,y,LV,,,,
+current_living_in_us,promotehealth,"Please answer these questions thinking about your life DURING the COVID-19 pandemic/lockdown.",yesno,"Are you currently living in the US?",,,,,,,,y,LV,,,,
+current_living_state,promotehealth,,dropdown,"Which state are you currently residing in?","1, Alabama | 2, Alaska | 3, Arizona | 4, Arkansas | 5, California | 6, Colorado | 7, Connecticut | 8, Delaware | 9, Florida | 10, Georgia | 11, Hawaii | 12, Idaho | 13, Illinois | 14, Indiana | 15, Iowa | 16, Kansas | 17, Kentucky | 18, Louisiana | 19, Maine | 20, Maryland | 21, Massachusetts | 22, Michigan | 23, Minnesota | 24, Mississippi | 25, Missouri | 26, Montana | 27, Nebraska | 28, Nevada | 29, New Hampshire | 30, New Jersey | 31, New Mexico | 32, New York | 33, North Carolina | 34, North Dakota | 35, Ohio | 36, Oklahoma | 37, Oregon | 38, Pennsylvania | 39, Rhode Island | 40, South Carolina | 41, South Dakota | 42, Tennessee | 43, Texas | 44, Utah | 45, Vermont | 46, Virginia | 47, Washington | 48, West Virginia | 49, Wisconsin | 50, Wyoming | 51, American Samoa | 52, Guam | 53, The Northern Mariana Islands | 54, Puerto Rico | 55, U.S. Virgin Islands",,autocomplete,,,,"[current_living_in_us] = '1'",y,,,,,
+current_living_outside,promotehealth,,text,"Which country are you currently residing in?",,,,,,,"[current_living_in_us] = '0'",y,,,,,
+living_with_whom,promotehealth,,radio,"During the COVID-19 lockdown, who were you living with?","1, Family | 2, Relatives | 3, Boyfriend/Girlfriend | 4, With friends/housemates | 5, By myself | 6, Other",,,,,,,y,LV,,,,
+num_people_living_with,promotehealth,,radio,"During the COVID-19 lockdown, how many people are you living with? ","1, 0 | 2, 1 | 3, 2 | 4, 3 | 5, 4 | 6, More than 4",,,,,,,y,LV,,,,
+employment,promotehealth,,radio,"Have you or anyone in your immediate family, close friends, or significant other lost a job due to the COVID-19 pandemic? Or their employment have been negatively affected due to the COVID-19 pandemic?","1, Yes | 2, No | 3, I'm not sure",,,,,,,y,LV,,,,
+family_business,promotehealth,,radio,"If your family owns any small business or any additional income source/s, did the COVID-19 pandemic negatively affect the business or the income source?","1, Yes | 2, No | 3, I'm not sure | 4, Not Applicable",,,,,,,y,LV,,,,
+infected,promotehealth,,radio,"Have you or anyone in your immediate family, close friends, or significant other gotten the coronavirus?","1, Yes | 2, No | 3, I'm not sure",,,,,,,y,LV,,,,
+essential_worker,promotehealth,,radio,"Are you or anyone in your immediate family, close friends, or significant other declared an ""essential worker"" during the COVID-19 pandemic?","1, Yes | 2, No | 3, I'm not sure",,,,,,,y,LV,,,,
+stressed_covid,promotehealth,"Concerns about the COVID19",radio,"How often are you stressed about the corona virus?","0, Very often | 1, Fairly often | 2, Sometimes | 3, Almost never | 4, Never",,,,,,,y,,,coronavirus_concern_matrix,,
+worried_covid,promotehealth,,radio,"I am worried that either myself or my friends, relatives, family members may get sick because of the corona virus outbreak.","0, Very often | 1, Fairly often | 2, Sometimes | 3, Almost never | 4, Never",,,,,,,y,,,coronavirus_concern_matrix,,
+effect_on_friends,promotehealth,,radio,"I am worried about the pandemic's effect on my friends, relatives, family's economic situation.","0, Very often | 1, Fairly often | 2, Sometimes | 3, Almost never | 4, Never",,,,,,,y,,,coronavirus_concern_matrix,,
+summer_job_affected,promotehealth,,yesno,"Has your summer employment such as internships/jobs been affected due to the pandemic?",,,,,,,,y,LV,,,,
+sleep_change_lockdown,promotehealth,,radio,"During the lockdown, my daily sleeping duration at night has been ______ than that it used to be BEFORE the Pandemic:
+
+","1, Longer | 2, Shorter | 3, The same",,,,,,,y,LV,,,,
+recreational_use,promotehealth,,radio,"During the lockdown, how frequently do you partake in any other recreational substances? (alcohol, marijuana, cocaine, heroin, ecstasy, amphetamines, etc.)? ","1, Very Frequently | 2, Frequently | 3, Occasionally | 4, Rarely | 5, Very Rarely | 6, Never",,,,,,,y,LV,,,,
+recreational_use_change,promotehealth,,radio,"If applicable, how is your usage of recreational substances been affected due to the pandemic?
+","1, Usage Increased | 2, Usage decreased | 3, Usage unchanged",,,,,,,,LV,,,,
+smoking_freq_lockdown,promotehealth,,radio,"During the lockdown, how frequently do you smoke cigarettes, cigars, pipes, or e-cigarettes? 
+","1, Very Frequently | 2, Frequently | 3, Occasionally | 4, Rarely | 5, Very Rarely | 6, Never",,,,,,,y,LV,,,,
+smoking_freq_change,promotehealth,,radio,"If applicable, how is your usage of cigarettes, cigars, pipes, or e-cigarettes been affected due to the pandemic?
+","1, Usage Increased | 2, Usage decreased | 3, Usage unchanged",,,,,,,,LV,,,,
+lockdown_seeing_fam,promotehealth,,radio,"During the lockdown, how often do you typically get to see (in person) and talk to family members, or significant other that your are not living with?
+
+","1, Most days | 2, About once/week | 3, About once/month | 4, During school breaks only | 5, Rarely or never",,,,,,,y,LV,,,,
+lockdown_seeing_friends,promotehealth,,radio,"During the lockdown, how often do you typically get to see your boyfriend/girlfriend/close friends?
+
+","1, Most days | 2, About once/week | 3, About once/month | 4, During school breaks only | 5, Rarely or never",,,,,,,y,LV,,,,
+lockdown_talking_people,promotehealth,,radio,"During the lockdown, how often did you talk to family members, close friends, or significant other via phone, text, or video app?","1, Most days | 2, About once/week | 3, About once/month | 4, During school breaks only | 5, Rarely or never",,,,,,,y,LV,,,,
+be_healthy,promotehealth,"Please reflect on the following question considering the lockdown time due to COVID19 and how it has affected you.",radio,"During the lockdown, I am actively trying to be healthy. For example, eating healthy, regularly going to the gym, taking/considering fitness classes, participating in recreational sports, etc","1, Very often | 2, Fairly often | 3, Sometimes | 4, Almost never | 5, Never",,,,,,,y,,,lockdown_reflection,,
+improve_spirit,promotehealth,,radio,"During the lock down, to improve my spirit, I engage in activities such as meditation, self-reflection, hobbies, activities that make me happy, etc.","1, Very often | 2, Fairly often | 3, Sometimes | 4, Almost never | 5, Never",,,,,,,y,,,lockdown_reflection,,
+stressful,promotehealth,,radio,"During the lock down, it has been stressful, at times, to constantly share the living space with family/relatives/significant others:","1, Very often | 2, Fairly often | 3, Sometimes | 4, Almost never | 5, Never",,,,,,,y,,,lockdown_reflection,,
+academic_work_lockdown,promotehealth,,radio,"During the lockdown, how many hours per week on average do you spend on academic work?
+","1, Less than 10 hours ( < 1.4hr/day) | 2, Between 10 - 20 hours (< 2.9hr/day) | 3, Between 20 - 30 hours (< 4.2hr/day) | 4, Between 30 - 40 hours (< 5.7hr/day) | 5, More than 40 hours ( > 5.7 hr/day)",,,,,,,y,LV,,,,
+lockdown_entertainment,promotehealth,,checkbox,"What did you do to keep yourself entertained in your free time during lock down?  Check all that apply","1, Cooking/Baking | 2, Outdoor Activities | 3, Exercising | 4, Artistic projects | 5, Taking online classes outside of school/learning a new skill | 6, TV/Movies/Streaming services (Netflix/Hulu/Disney+) | 7, Reading | 8, Calls with friends/family | 9, Video games | 10, Social media (TikTok, Instagram, Snapchat, YouTube) | 11, Take naps | 12, I did not have free time during lockdown | 13, Other",,,,,,,y,LV,,,,
+online_difficulty,promotehealth,"The following questions are about transitioning to online learning due to the pandemic",radio,"Overall, online learning has been difficult for me to follow.
+
+","1, Strongly agree | 2, Agree | 3, Neither agree nor disagree | 4, Disagree | 5, Strongly disagree",,,,,,,y,LV,,,,
+online_motivate,promotehealth,,radio,"I find it difficult to motivate myself to work while following online learning.","1, Strongly agree | 2, Agree | 3, Neither agree nor disagree | 4, Disagree | 5, Strongly disagree",,,,,,,y,LV,,,,
+classes_pass_fail,promotehealth,,dropdown,"For how many of your classes did you choose the pass/fail option?","0, 0 | 1, 1 | 2, 2 | 3, 3 | 4, 4 | 5, 5 | 6, More than 5",,,,,,,y,LV,,,,
+reason_pass_fail,promotehealth,,checkbox,"If you chose P/F for one or more of your classes, which of the following reasons did you choose P/F? (check all that apply)","1, Additional responsibilities at home meant reduced time spent on classes | 2, Needed to get a job to support myself/my family | 3, Personal sickness due to the virus | 4, Caring for a sick family member | 5, Inadequate internet connection at home | 6, Time difference between classes made learning difficult | 7, Mental health made focusing on studying difficult | 8, Concerned about the negative effect on GPA | 9, I did not choose P/F for any of my courses | 10, Other",,,,,,,y,LV,,,,
+reason_grade,promotehealth,,checkbox,"If you chose grades for one or more of your classes, which of the following reasons did you choose grades?","1, Concerned about admission to graduate school/medical school | 2, Had additional time to focus on school | 3, Wanted to keep motivation up for classes | 4, Online learning suited my learning style better | 5, Tests/assessments easier to complete online | 6, I knew I would get a good grade in the course | 7, I did not choose grades for any of my courses | 8, Other",,,,,,,y,LV,,,,
+online_worth,promotehealth,,radio,"Online classes were worth the tuition cost this semester. 
+","1, Strongly agree | 2, Agree | 3, Neither agree nor disagree | 4, Disagree | 5, Strongly disagree",,,,,,,y,LV,,,,
+fall_online,promotehealth,,radio,"If the fall semester is online, I will take classes next semester. 
+
+","1, Strongly agree | 2, Agree | 3, Neither agree nor disagree | 4, Disagree | 5, Strongly disagree",,,,,,,,LV,,,,
+academic_perf,promotehealth,,radio,"In terms of my academic performance, I did _______
+
+","1, Better than last semester | 2, Worse than last semester | 3, About the same as last semester",,,,,,,y,LV,,,,
+disability,promotehealth,,yesno,"Do you have a disability for which an accommodation plan is on file with the university? ",,,,,,,,y,,,,,
+disab_acco,promotehealth,,radio,"It was easy to continue receiving accommodations during remote learning. ","1, Strongly Agree | 2, Agree | 3, Undecided | 4, Disagree | 5, Strongly Disagree",,,,,,"[disability] = '1'",y,,,,,
+phq9_1,promotehealth,"The following questions are used to assess signs of ongoing depression (adapted from PHQ-9). 
+
+During the lockdown due to COVID19, how often have you been bothered by any of the following problems?",radio,"Little interest or pleasure in doing things","1, Not at all | 2, Several days | 3, More than half the days | 4, Nearly every day",,,,,,,y,,,phq9_matrix,,
+phq9_2,promotehealth,,radio,"Feeling down, depressed or hopeless","1, Not at all | 2, Several days | 3, More than half the days | 4, Nearly every day",,,,,,,y,,,phq9_matrix,,
+phq9_3,promotehealth,,radio,"Trouble falling or staying asleep, or sleeping too much","1, Not at all | 2, Several days | 3, More than half the days | 4, Nearly every day",,,,,,,y,,,phq9_matrix,,
+phq9_4,promotehealth,,radio,"Feeling tired or having little energy","1, Not at all | 2, Several days | 3, More than half the days | 4, Nearly every day",,,,,,,y,,,phq9_matrix,,
+phq9_5,promotehealth,,radio,"Poor appetite or overeating","1, Not at all | 2, Several days | 3, More than half the days | 4, Nearly every day",,,,,,,y,,,phq9_matrix,,
+phq9_6,promotehealth,,radio,"Feeling bad about yourself- or that you are a failure or have let yourself or your family down","1, Not at all | 2, Several days | 3, More than half the days | 4, Nearly every day",,,,,,,y,,,phq9_matrix,,
+phq9_7,promotehealth,,radio,"Trouble concentrating on things, such as reading the newspaper or watching television","1, Not at all | 2, Several days | 3, More than half the days | 4, Nearly every day",,,,,,,y,,,phq9_matrix,,
+phq9_8,promotehealth,,radio,"Moving or speaking so slowly that other people could have noticed? Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual","1, Not at all | 2, Several days | 3, More than half the days | 4, Nearly every day",,,,,,,y,,,phq9_matrix,,
+phq9_9,promotehealth,,radio,"Thoughts that you would be better off dead or hurting yourself in some way","1, Not at all | 2, Several days | 3, More than half the days | 4, Nearly every day",,,,,,,y,,,phq9_matrix,,
+phq9_final,promotehealth,,radio,"If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people? ","0, Not difficult at all | 1, Somewhat difficult | 2, Very difficult | 3, Extremely difficult | 4, N/A (I did not check off any problems)",,,,,,,y,LV,,,,
+suicide,promotehealth,,yesno,"Have you ever had thoughts of committing suicide?",,,,,,,,y,LV,,,,
+si_timeline,promotehealth,,checkbox,"If you answered 'Yes' to the previous question, how long ago did you experience those thoughts?","1, Less than a month ago | 2, Within the last 3 months | 3, Within the last 6 months | 4, More than 6 months ago | 5, Not applicable",,,,,,"[suicide] = 1",y,LV,,,,
+feeling_nervous_anxious_or,promotehealth,"The next set of questions are used to assess signs of anxiety (adapted from GAD-7). 
+
+During the lockdown due to COVID19, how often have you experienced the following?",radio,"Feeling nervous, anxious, or on edge","1, Not at all sure | 2, Several days | 3, Over half the days | 4, Nearly every day",,,,,,,y,,,gad_7,,
+not_being_able_to_stop_or,promotehealth,,radio,"Not being able to stop or control worrying","1, Not at all sure | 2, Several days | 3, Over half the days | 4, Nearly every day",,,,,,,y,,,gad_7,,
+worrying_too_much_about_di,promotehealth,,radio,"Worrying too much about different things","1, Not at all sure | 2, Several days | 3, Over half the days | 4, Nearly every day",,,,,,,y,,,gad_7,,
+trouble_relaxing,promotehealth,,radio,"Trouble relaxing","1, Not at all sure | 2, Several days | 3, Over half the days | 4, Nearly every day",,,,,,,y,,,gad_7,,
+being_so_restless_that_it,promotehealth,,radio,"Being so restless that it's hard to sit still","1, Not at all sure | 2, Several days | 3, Over half the days | 4, Nearly every day",,,,,,,y,,,gad_7,,
+becoming_easily_annoyed_or,promotehealth,,radio,"Becoming easily annoyed or irritable","1, Not at all sure | 2, Several days | 3, Over half the days | 4, Nearly every day",,,,,,,y,,,gad_7,,
+feeling_afraid_as_if_somet,promotehealth,,radio,"Feeling afraid as if something awful might happen","1, Not at all sure | 2, Several days | 3, Over half the days | 4, Nearly every day",,,,,,,y,,,gad_7,,
+ros_satisfied_self,promotehealth,"The next set of questions are used to assess an individual's current self-esteem (adapted from the Rosenberg Self-Esteem Scale).",radio,"On the whole, I am satisfied with myself.","1, Strongly Agree | 2, Agree | 3, Disagree | 4, Strongly Disagree",,,,,,,y,,,rosenberg_self_esteem,,
+ros_good,promotehealth,,radio,"At times I think I am no good at all.","1, Strongly Agree | 2, Agree | 3, Disagree | 4, Strongly Disagree",,,,,,,y,,,rosenberg_self_esteem,,
+ros_good_qualities,promotehealth,,radio,"I feel that I have a number of good qualities.","1, Strongly Agree | 2, Agree | 3, Disagree | 4, Strongly Disagree",,,,,,,y,,,rosenberg_self_esteem,,
+ros_well_as_othres,promotehealth,,radio,"I am able to do things as well as most other people.","1, Strongly Agree | 2, Agree | 3, Disagree | 4, Strongly Disagree",,,,,,,y,,,rosenberg_self_esteem,,
+ros_proud,promotehealth,,radio,"I feel I do not have much to be proud of.","1, Strongly Agree | 2, Agree | 3, Disagree | 4, Strongly Disagree",,,,,,,y,,,rosenberg_self_esteem,,
+ros_useless,promotehealth,,radio,"I certainly feel useless at times.","1, Strongly Agree | 2, Agree | 3, Disagree | 4, Strongly Disagree",,,,,,,y,,,rosenberg_self_esteem,,
+ros_worth,promotehealth,,radio,"I feel that I'm a person of worth, at least on an equal plane with others.","1, Strongly Agree | 2, Agree | 3, Disagree | 4, Strongly Disagree",,,,,,,y,,,rosenberg_self_esteem,,
+ros_respect,promotehealth,,radio,"I wish I could have more respect for myself.","1, Strongly Agree | 2, Agree | 3, Disagree | 4, Strongly Disagree",,,,,,,y,,,rosenberg_self_esteem,,
+ros_failure,promotehealth,,radio,"All in all, I am inclined to feel that I am a failure.","1, Strongly Agree | 2, Agree | 3, Disagree | 4, Strongly Disagree",,,,,,,y,,,rosenberg_self_esteem,,
+ros_positive_attitude,promotehealth,,radio,"I take a positive attitude toward myself.","1, Strongly Agree | 2, Agree | 3, Disagree | 4, Strongly Disagree",,,,,,,y,,,rosenberg_self_esteem,,
+someone_to_talk_to,promotehealth,"The next set of questions are related to sources of social support and potential important events in one's life",radio,"Is there someone in your life who you can talk to about any problem?","1, Yes | 0, No",,,,,,,,,,socialsupport_matrix,,
+emergency_living,promotehealth,,radio,"Do you have someone you could stay with in an emergency?","1, Yes | 0, No",,,,,,,,,,socialsupport_matrix,,
+money_for_needs,promotehealth,,radio,"Do you usually have enough money to meet your needs?","1, Yes | 0, No",,,,,,,,,,socialsupport_matrix,,
+eat_less,promotehealth,,radio,"Do you sometimes eat less than you would like because of money concerns?","1, Yes | 0, No",,,,,,,,,,socialsupport_matrix,,
+borrow_money,promotehealth,,radio,"Is there someone in your life that would let you borrow money in the event of an emergency?","1, Yes | 0, No",,,,,,,,,,socialsupport_matrix,,
+lose_housing,promotehealth,,radio,"Do you worry that you will lose your housing?","1, Yes | 0, No",,,,,,,,,,socialsupport_matrix,,
+politically_involved,promotehealth,"Considering the COVID19 pandemic, please reflect on the following questions about your take on the political state of the nation",radio,"I am politically involved. 
+
+
+","1, Strongly agree | 2, Agree | 3, Neither agree nor disagree | 4, Disagree | 5, Strongly disagree",,,,,,,y,LV,,,,
+trump_approval,promotehealth,,radio,"I approve of the Trump administration's response to the pandemic.
+
+","1, Strongly agree | 2, Agree | 3, Neither agree nor disagree | 4, Disagree | 5, Strongly disagree",,,,,,,y,LV,,,,
+vote,promotehealth,,radio,"If I can vote in the US election, I will be voting for Trump in the 2020 election.
+
+","1, Strongly agree | 2, Agree | 3, Neither agree nor disagree | 4, Disagree | 5, Strongly disagree | 6, I cannot vote in the US election | 7, I can vote, but I will be abstaining from voting",,,,,,,y,LV,,,,
+after_corona_politics,promotehealth,,radio,"After the coronavirus, I feel:
+
+","1, More politically engaged/aware | 2, Less politically engaged/aware | 3, About the same",,,,,,,y,LV,,,,
