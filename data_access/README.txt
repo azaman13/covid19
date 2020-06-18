@@ -4,6 +4,7 @@ How to Use:
 
 -- Your file must be in the main directory
 -- Use the following import statement: from data_access.key import retrieve_question_data,retrieve_user_groups
+-- Reference "survey_data_dict.csv" to find the column names for the questions you would like to group the users by. The "column_name" is found in "Variable / Field Name"
 
 Functions:
 
@@ -29,8 +30,8 @@ retrieve_user_groups(column_name)
                    The keys in the user dictonary are the users new survey ID, and the corresponding value is a pandas datafram containing all of the users browsing data
 
 -- Edge cases: When attempting to retrive users aggregated by their depression, anxiety, etc, use the following as your column_name:
-++ depression
-++ anxiety
-++ self_esteem
+++ depression 
+++ anxiety (gad7 > 9: anxious, gad7 <= 9: not anxious)
+++ self_esteem (self-esteem score > 15: moderate to high self-esteem, gad7 <= 9: low self-esteem)
 
 
