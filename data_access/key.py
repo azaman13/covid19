@@ -25,33 +25,32 @@ def retrieve_all_questions():
         question_key[column] = question
     return question_key
 
-def retrun_month_df(user_df,month,year): 
-    df_data_month = user_df[(user_df['years'] == year) & (user_df['months'] == month)]
-    df_data_month['datetime'] = pd.to_datetime(df_data_month.datetime)
-    df_data_month = df_data_month.sort_values(by='datetime',ascending =True).reset_index()
-    return df_data_month
+def retrive_custom_user_groups(group_name,group_params):
+    user_responses = {}
+    for i in group_params['categories']:
+        user_responses[i] = {}
+    userCount = 0
+    files = glob.glob('user_search_data/*.csv')
+    input_file_name = "processed_survey_data.csv"
+    df = pd.read_csv(input_file_name)
+    for i,row in df.iterrows():
+        file = [file for file in files if str(row["record_id"])+"_" in file]
+        df_temp = pd.read_csv(file[0])
+        if row[group_params["score_field"]] <= group_params["threshold"]:
+            user_responses[group_params["categories"][0]][row["record_id"]] = df_temp
+            userCount += 1 
+        else:
+            user_responses[group_params["categories"][1]][row["record_id"]] = df_temp
+            userCount += 1
+    for i in user_responses.keys():
+        print(i+" | Percentage of Sample: "+str("{0:.0%}".format(len(user_responses[i].keys())/userCount)))
+    return user_responses   
 
-def return_user_activity_status(user_df):
-    minEventCount = 100
-    lastDateForFull = 20
-    year = 2020
-    months_to_check = [1,2,3,4,5]
-    userDic = {}
-    goodUsers = []
-    for file in files:
-        for month in range(1,12):
-            if retrun_month_df(user_df,month,year).shape[0] > minEventCount and max(retrun_month_df(user_df,month,year)['datetime']).day > lastDateForFull:
-                goodMonths.append(month)
-        userDic[file] = goodMonths
-    for i in list(userDic.keys()):
-        if len([j for j in months_to_check if j in userDic[i]]) == len(months_to_check):
-            goodUsers.append(i)
-    if len(goodUsers) == 0:
-        return False
-    else:
-        return True
 
-def retrive_user_responses(column_name):
+def retrieve_user_groups(column_name):
+    custom_groups = {"anxiety":{"threshold":9,"categories":["not_anxious","anxious"],"score_field":"gad7_score"},"self_esteem":{"threshold":15,"categories":["low_self_esteem","not_low_self_esteem"],"score_field":"selfesteem_score"}}        
+    if column_name.lower() in custom_groups.keys():
+        return retrive_custom_user_groups(column_name.lower(),custom_groups[column_name.lower()])
     userCount = 0
     files = glob.glob('user_search_data/*.csv')
     question,answers = retrieve_question_data(column_name)
@@ -76,4 +75,9 @@ def retrive_user_responses(column_name):
     return user_responses
 
 
-retrive_user_responses("num_people_living_with")
+
+
+
+
+
+retrieve_user_groups("self_esteem")
