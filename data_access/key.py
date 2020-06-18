@@ -73,11 +73,3 @@ def retrieve_user_groups(column_name):
     for i in answers.keys():
         print(i,"=",answers[i]+" | Percentage of Sample: "+str("{0:.0%}".format(len(user_responses[int(i)].keys())/userCount)))
     return user_responses
-
-
-
-
-
-
-
-retrieve_user_groups("self_esteem")
