@@ -76,5 +76,16 @@ def main():
     print("New File Created:",output_file_name)
     final_df.to_csv(output_file_name)
 
-main()
 
+
+def gen_dict():
+    count_dict = {}
+    categories = ['News & Politics & Society','Living & Well-being','Adult & Sensitive & Illegal','Health & Fitness','Arts & Entertainment','Finance & Business','Jobs & Education','neutral','Science & Tech.',"Sports"]
+    for category in categories:
+        timeCounts = {}
+        for hour in range(0,24):
+            timeCounts[hour] = 0
+        count_dict[category] = timeCounts
+    print(count_dict)
+    return count_dict         
+gen_dict()
